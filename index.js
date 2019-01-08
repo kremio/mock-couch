@@ -108,6 +108,7 @@ function MockCouch(server, options) {
     server.get('/:db/_design/:designdoc/_show/:name', get_show);
   }(server, this));
 
+  this._server = server;
   this.addDB = require('./lib/addDB');
   this.addDoc = require('./lib/addDoc');
 }
